@@ -13,7 +13,7 @@
 	<Code class="bg-transparent px-0">{parseMarkdown(attr.value ?? "''")}</Code>
 {/snippet}
 
-{#snippet DefinitionContent({ definition }: { definition: Component })}
+{#snippet DefinitionContent({ definition: Definition }: { definition: Component })}
 	<Popover.Content
 		preventScroll={false}
 		side="top"
@@ -21,7 +21,7 @@
 		class="z-50 max-h-[400px] overflow-auto rounded-card bg-background shadow-popover"
 	>
 		<div class="[&_[data-line]]:!pr-2.5 [&_pre]:!my-0 [&_pre]:!mb-0 [&_pre]:!mt-0">
-			<svelte:component this={definition} />
+			<Definition />
 		</div>
 	</Popover.Content>
 {/snippet}

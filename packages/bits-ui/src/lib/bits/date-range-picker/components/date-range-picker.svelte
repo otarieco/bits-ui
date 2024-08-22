@@ -83,10 +83,12 @@
 		value: box.with(
 			() => value as DateRange,
 			(v) => {
-				if (!$state.is(value, v)) {
-					value = v;
-					onValueChange(v);
-				}
+				value = v;
+				onValueChange(v);
+				// if (!$state.is(value, v)) {
+				// 	value = v;
+				// 	onValueChange(v);
+				// }
 			}
 		),
 		placeholder: box.with(
